@@ -1,0 +1,126 @@
+/* General Styling */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Zen+Dots&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  flex-direction: column; /* Stack vertically */
+}
+
+/* Counter Display */
+.count {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px; /* Space between counter and buttons */
+}
+
+/* Counter Animation */
+.count:hover {
+  transform: scale(1.1);
+}
+
+/* Button Container */
+.btns-container {
+  display: flex;
+  gap: 25px;
+}
+
+/* Buttons */
+button {
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 20px 50px;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Unique Font for Buttons */
+.increment {
+  background: #4caf50; /* Green */
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  letter-spacing: 2px;
+}
+
+.increment:hover {
+  background: #66bb6a;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.increment:active {
+  transform: scale(0.95);
+}
+
+.decrement {
+  background: #e53935; /* Red */
+  font-family: "Zen Dots", cursive; /* Funky font */
+  letter-spacing: 1.5px;
+}
+
+.decrement:hover {
+  background: #ef5350;
+  transform: translateY(-5px) scale(1.1);
+}
+
+.decrement:active {
+  transform: scale(0.95);
+}
+
+/* Smooth Transition on Hover */
+button:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .count {
+    font-size: 5rem;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 15px 40px;
+  }
+
+  .btns-container {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .count {
+    font-size: 3.5rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 10px 30px;
+  }
+
+  .btns-container {
+    gap: 10px;
+  }
+}
